@@ -1,0 +1,39 @@
+.nav_button {
+    font-family: Georgia;
+    color: #757575;
+    font-size: 20px;
+    padding: 10px 30px 10px 30px;
+    border: solid #BDBDBD 1px;
+    text-decoration: none;
+    background: #FFFFFF;
+    width: 250px;
+    margin: 12px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.nav_button:hover {
+    background: #FAFAFA;
+    text-decoration: none;
+}
+
+#name {
+    font-family: Georgia;
+    color: #757575;
+    font-size: 56px;
+    text-align: center;
+    padding: 56px 10px;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#f1 {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
