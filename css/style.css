@@ -2,12 +2,12 @@
     font-family: Georgia;
     color: #757575;
     font-size: 20px;
-    padding: 10px 30px 10px 30px;
+    padding: 5px 15px;
     border: solid #BDBDBD 1px;
     text-decoration: none;
     background: #FFFFFF;
-    width: 250px;
-    margin: 12px;
+    width: auto;
+    margin: auto;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
 }

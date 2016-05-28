@@ -5,8 +5,11 @@
 /* Carousel base class */
 .carousel {
     height: 500px;
-    margin-top: 60px;
-    margin-bottom: 60px;
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+
+    display: flex;
+    align-items: center;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -39,7 +42,6 @@
 }
 
 .carousel-indicators {
-  bottom:-50px;
 }
 
 .carousel-indicators li {
