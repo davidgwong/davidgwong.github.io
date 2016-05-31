@@ -4,10 +4,10 @@
 
 /* Carousel base class */
 .carousel {
-    height: 500px;
     min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-    min-height: 100vh; /* These two lines are counted as one :-)       */
-
+    min-height: 50vh; /* These two lines are counted as one :-)       */
+    max-height: 50vh;
+    margin: auto;
     display: flex;
     align-items: center;
 }
@@ -18,9 +18,14 @@
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-    height: 500px;
+    height: 50vh;
     background-color: #ffffff;
 }
+
+.carousel-max-width {
+    max-width: 75vh;
+}
+
 
 .carousel-inner > .item > img {
     max-width: 100%;
@@ -38,7 +43,6 @@
 }
 
 .carousel-inner {
-   margin-bottom:50px;
 }
 
 .carousel-indicators {
