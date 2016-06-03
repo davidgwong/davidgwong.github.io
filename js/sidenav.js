@@ -1,16 +1,10 @@
 /*jslint browser: true*/
 /*global $, jQuery, alert*/
-
-$(".carousel").swipe( {
-    //Generic swipe handler for all directions
-    swipeLeft:function(event, direction, distance, duration, fingerCount) {
-        $(this).parent().carousel('prev'); 
-    },
-    swipeRight:function(event, direction, distance, duration, fingerCount) {
-        $(this).parent().carousel('next'); 
-    },
-    //Default is 75px, set to 0 for demo so any distance triggers swipe
-    threshold:0
+$(".carousel").swiperight(function() {
+    $(this).carousel('prev');
+});
+$(".carousel").swipeleft(function() {  
+    $(this).carousel('next');
 });
 
 // Source: http://jsfiddle.net/mekwall/up4nu/

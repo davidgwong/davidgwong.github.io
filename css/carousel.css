@@ -3,7 +3,7 @@
 -------------------------------------------------- */
 
 /* Carousel base class */
-.carousel {
+.carousel, .slick-carousel {
     min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
     min-height: 50vh; /* These two lines are counted as one :-)       */
     max-height: 50vh;
@@ -17,7 +17,7 @@
 }
 
 /* Declare heights because of positioning of img element */
-.carousel .item {
+.carousel .item, .item {
     height: 50vh;
     background-color: #ffffff;
 }
