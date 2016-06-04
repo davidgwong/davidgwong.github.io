@@ -25,10 +25,19 @@
     <div id="sidebar" class="col-xs-3 bs-docs-sidebar">
         <ul class="nav nav-stacked fixed">
             <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="#AmazonPriceChecker">Amazon Price Checker</a>
+            </li>
+            <li>
                 <a href="#RoboticBoat">Robotic Boat</a>
             </li>
             <li>
                 <a href="#SunlightPositionSimulator">Sunlight Position Simulator</a>
+            </li>
+            <li>
+                <a href="#ClefairyGame">Clefairy Says using an Accelerometer</a>
             </li>
             <li>
                 <a href="#UVLightFixture">UV Light Fixture</a>
@@ -37,10 +46,99 @@
     </div>
     <!--Main Content -->
     <div class="col-xs-9">
+        
+        <div id="AmazonPriceChecker" class="project-descriptions">
+            <section class="group">
+                <h3>Amazon Price Checker</h3>
+                <p>
+                    <b>Team members:</b> Tim Cheung, David Dang, David Wong <br>
+                    <b>Duration of project:</b> May 14-15, 2016<br>
+                    <br>
+                    <i><b>Introduction</b></i> - This website was developed for the <a href="https://www.angularattack.com/">Angular Attack 48 hour online Angular Hackathon</a>. This website checks whether buying from Amazon.ca is cheaper than Amazon.com.<br>
+                    <br>
+                    <i><b>Description</b></i> - Compare the product prices on Amazon.com and Amazon.ca to see if it is cheaper with the current exchange rates. (Safari is not supported)<br>
+                    <br>
+                    <i><b>Instructions</b></i> - Search for a product you wish to buy on Amazon.<br>
+                    <br>
+                    <i><b>Built with</b></i>
+                    <ul>
+                        <li>Digital Ocean server hosting a Node JS amazon product api client, running on Koa.</li>
+                        <li>This starter pack https://github.com/antonybudianto/angular2-starter, which includes Angular 2, SystemJS, Gulp, and Bootstrap</li>
+                    </ul>
+                </p>
+            
+            <div class="container-fluid">
+                <!-- Carousel
+                ================================================== -->
+                <div id="amazonPriceCheckerCarousel" class="carousel slide carousel-max-width" data-interval="false">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#amazonPriceCheckerCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#amazonPriceCheckerCarousel" data-slide-to="1"></li>
+                    <li data-target="#amazonPriceCheckerCarousel" data-slide-to="2"></li>
+                  </ol>
+                  <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img class="first-slide" src="/images/amazon_price_checker/home_page.jpg" alt="First slide">
+                    </div>
+                    <div class="item">
+                      <img class="second-slide" src="/images/amazon_price_checker/search_page.jpg" alt="Second slide">
+                    </div>
+                    <div class="item">
+                      <img class="third-slide" src="/images/amazon_price_checker/results_page.jpg" alt="Third slide">
+                    </div>
+                  </div>
+                  <a class="left carousel-control" href="#amazonPriceCheckerCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="right carousel-control" href="#amazonPriceCheckerCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div><!-- /.carousel -->
+            </div>
+            </section>
+        </div>
+        
         <div id="RoboticBoat" class="project-descriptions">
         <section class="group">
             <h3>Robotic Boat</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>
+                <b>Team members:</b> Jaclyn Tarnai, Graham Williamson, David Wong, Yiran Zhou <br>
+                <b>Duration of project:</b> September 2015 - April 2016<br>
+                <br>
+                <i><b>Abstract</b></i> - The goal of this project is to create a low cost autonomous marine vessel for surveying the bottom of lakes with a bathymetry sensor. The main objectives for this project are autonomous GPS waypoint navigation for a cost less than $2,750. The final design was a 2m long catamaran vessel, with a top speed of 8km/h.<br>
+                <br>
+                <i><b>Introduction</b></i> - The client, Stratus Aeronautics, was considering the development of a low cost autonomous marine vessel for operation on lakes within Canada. Existing bathymetry products were prohibitively expensive, or lacked desired functionality. Therefore, development of a low cost custom designed vessel was required. To complete this project, the design team had to meet the following objectives:
+                <ul>
+                    <li>Device operates autonomously</li>
+                    <li>Device costs less than $2,750 CAD</li>
+                    <li>Device is in the order of 1.8m x 0.9m</li>
+                    <li>Device can be transported in the rear of a truck</li>
+                    <li>Device travels greater than 5 km/h</li>
+                </ul>
+                Following completion Stratus will use the boat to perform bathymetry surveys of freshwater locations, as a part of their unmanned surveying business.<br>
+                <br>
+                <i><b>Design overview</b></i> - The team designed and constructed a 2m long catamaran vessel, which is capable of holding equipment adding up to a total max weight of 45.6kg. The vessel has two rudders and two thrusters placed between the hulls. Five LiFePO4 batteries are used to power the electronics. The LiFePO4 batteries are placed inside the hulls for stability. Two Pelican watertight cases are used to house the electronics. Two 4-cell LiPO batteries are used separately to power the payload. The payload is an M3 multi-beam echosounder provided by Kongsberg Mesotech. The boat is controlled with a Pixhawk Autopilot by setting GPS waypoints.<br>
+                <br>
+                <i><b>Technical analysis and testing</b></i> - An analytical model of the boat was created to optimize the boat dimensions for best performance and to identify the most critical and risky criterion.  An example of the graphical output from the analytical model is provided below.  Five tests were conducted to validate and verify that the boat meets the needs and requirements set:
+                <ul>
+                    <li>Critical function prototype on the autonomous navigation system</li>
+                    <li>Scale model drag test</li>
+                    <li>Final prototype float test</li>
+                    <li>Final prototype trial test at Alta Lake</li>
+                    <li>Final prototype trial test at Como Lake</li>
+                </ul>
+                Results:
+                <ul>
+                    <li>Maximum speed of approximately 2.2 m/s (8 km/h)</li>
+                    <li>Turning radius of approximately 1.7 m</li>
+                    <li>Operating time of about 2 hours (for sensor)</li>
+                    <li>Calculated operating time 10.66hr with lithium batteries</li>
+                </ul>
+                <i><b>Discussion and conclusion</b></i> - The measured boat weight was initially predicted to be reduced by close to 10kg by switching to lithium batteries from lead-acid. However more durable features were added, which cut into expected weight savings. The main functions of the boat are currently in operation, however some tuning is still required for the autopilot system. The design team have not been able to confirm the actual boats battery life since the capacity is so large.
+            </p>
             
             <div class="container-fluid">
                 <!-- Carousel
@@ -55,28 +153,32 @@
                     <li data-target="#roboticBoatCarousel" data-slide-to="4"></li>
                     <li data-target="#roboticBoatCarousel" data-slide-to="5"></li>
                     <li data-target="#roboticBoatCarousel" data-slide-to="6"></li>
+                    <li data-target="#roboticBoatCarousel" data-slide-to="7"></li>
                   </ol>
                   <div class="carousel-inner" role="listbox">
                     <div class="item active embed-responsive embed-responsive-16by9">
                         <iframe class="first-slide embed-responsive-item" src="https://www.youtube.com/embed/WMHX7b74x0I" frameborder="0" allowfullscreen alt="First slide"></iframe>
                     </div>
                     <div class="item">
-                      <img class="second-slide" src="/images/robotic_boat/fountain-1.jpg" alt="Second slide">
+                      <img class="second-slide" src="/images/robotic_boat/cad_render.jpg" alt="Second slide">
                     </div>
                     <div class="item">
-                      <img class="third-slide" src="/images/robotic_boat/fountain-2.jpg" alt="Third slide">
+                      <img class="third-slide" src="/images/robotic_boat/fountain-1.jpg" alt="Third slide">
                     </div>
                     <div class="item">
-                      <img class="fourth-slide" src="/images/robotic_boat/whistler-1.jpg" alt="Fourth slide">
+                      <img class="fourth-slide" src="/images/robotic_boat/fountain-2.jpg" alt="Fourth slide">
                     </div>
                     <div class="item">
-                      <img class="fifth-slide" src="/images/robotic_boat/whistler-2.jpg" alt="Fifth slide">
+                      <img class="fifth-slide" src="/images/robotic_boat/whistler-1.jpg" alt="Fifth slide">
                     </div>
                     <div class="item">
-                      <img class="sixth-slide" src="/images/robotic_boat/como-1.jpg" alt="Sixth slide">
+                      <img class="sixth-slide" src="/images/robotic_boat/whistler-2.jpg" alt="Sixth slide">
                     </div>
                     <div class="item">
-                      <img class="seventh-slide" src="/images/robotic_boat/como-2.jpg" alt="Seventh slide">
+                      <img class="seventh-slide" src="/images/robotic_boat/como-1.jpg" alt="Seventh slide">
+                    </div>
+                    <div class="item">
+                      <img class="eigth-slide" src="/images/robotic_boat/como-2.jpg" alt="Eigth slide">
                     </div>
                   </div>
                   <a class="left carousel-control" href="#roboticBoatCarousel" role="button" data-slide="prev">
@@ -92,11 +194,38 @@
             
         </section>
         </div>
+          
         <div id="SunlightPositionSimulator" class="project-descriptions">
         <section class="group">
             
             <h3>Sunlight Position Simulator</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>
+                <b>Team members:</b> Zhenhe Lu, David Wong <br>
+                <b>Duration of project:</b> March 2016 - April 2016<br>
+                <br>
+                <i><b>Abstract</b></i> - The objective of this project is to physically simulate the position of the sunlight relative to the Earth. Typically, in solar system models, the Earth revolves around the sun and the Earth rotates at an angle of approximately 23.5 degrees. Therefore, this can be difficult for people to understand why the amount of daylight varies depending on the time of the year, and also how and why time zones exists.<br>
+                <br>
+                For this model, the reference frame is changed from the sun to the Earth’s axis of rotation to minimize confusion. The model will also exaggerate the sunlight concentration to highlight how the sunlight moves with time. To demonstrate the concept of time zones and how the amount of daylight varies, the following features was implemented:
+                <ul>
+                    <li>Automatic rotation of the Earth and automatic light position adjustment</li>
+                    <ul><li>This feature simulates the Earth’s rotation and how the sunlight position varies with time</li></ul>
+                    <li>Location lookup and date lookup</li>
+                    <ul><li>This feature allows the user to lookup a location to obtain the sunrise, sunset, twilight begin, and twilight end of a certain location at a certain date. As well, the Earth with rotate to that location and display where the sunlight position will be.</li></ul>
+                </ul>
+                <i><b>Objective</b></i> - The objective of this project is to build a sunlight position simulator to demonstrate the concept of time zones and how the amount of daylight varies. The sunlight position similar uses a desktop globe that rotates either automatically or according to the date and location from user input on the software. A stepper motor is used control globe’s angular position. As well, an array of LEDs is used to simulate the sunlight location relative to the earth. A user interface software was designed and used read user input and send signal to microcontroller to rotate the globe and light up LEDs in order to represent a miniature of earth-solar system. <br>
+                <br>
+                <i><b>Rationale</b></i> - This project physically simulates the position of the sunlight relative to the earth, so it is useful for education purposes such as astronomy. The user can understand the concepts of time zones and seasons due to the physical representation. Lastly, this project makes for a great art piece compared to a standard clock or calendar. Compared to other models, this project changes the reference frame from the sun to the Earth’s rotation axis to minimize confusion. As well, this project uses a physical model controlled by software to make it easy to visually understand the concept of time zones and seasons.<br>
+                <br>
+                <i><b>Functional Requirements</b></i> - The following functional requirements were met in order to complete the project:
+                <ul>
+                    <li>Programming the MSP430 microcontroller to control the stepper motor</li>
+                    <li>Designing the LED array to simulate the sunlight</li>
+                    <li>Developing a C# program for the user interface and system integration</li>
+                    <li>Designing and fabricating the mechanical components and assembly</li>
+                    <li>Developing the code to determine the Earth's rotation and sunlight location</li>
+                </ul>
+
+            </p>
             
             <div class="container-fluid">
                 <!-- Carousel
@@ -138,11 +267,90 @@
 
         </section>
         </div>
+          
+          <div id="ClefairyGame" class="project-descriptions">
+              <section class="group">
+                  <h3>Clefairy Says using an Accelerometer</h3>
+                  <p>
+                      <b>Team members:</b> David Wong<br>
+                      <b>Duration of project:</b> January 2016<br>
+                      <br>
+                      <i><b>Introduction</b></i> - This program uses a 3-axis accelerometer as a controller to play the Nintendo 64 Pokémon Stadium mini-game, Clefairy Says. The program was developed in C# using Visual Studios.<br>
+                      <br>
+                      <i><b>Design overview</b></i> - The C# program reads the data from the accelerometer in the following sequence: Start byte, X-acceleration byte, Y-acceleration byte, Z-acceleration byte. The following features are implemented for handling the acceleration data:
+                      <ul>
+                          <li>Displaying current value and standard deviation for each axis</li>
+                          <li>Displaying current orientation</li>
+                          <li>Displaying the last 100 values for each axis on a line graph</li>
+                          <li>Saving the values to a CSV file</li>
+                          <li>Recognizing acceleration sequences as gestures and displaying the gesture</li>
+                      </ul>
+                      From this, the Clefairy Says game can utilize the gesture recognition as the Up, Down, Left, Right inputs. The C# program will start the game with the sound, graphics, music, and animations similar to the actual Nintendo 64 game as shown in the following YouTube video: <a href="https://www.youtube.com/watch?v=9hNphbAm_Hs">https://www.youtube.com/watch?v=9hNphbAm_Hs</a>
+                  </p>
+                  <img src="/images/clefairy_says.jpg" class="img-responsive" alt="Responsive image">
+              </section>
+          </div>
         
         <div id="UVLightFixture" class="project-descriptions">
         <section class="group">
             <h3>UV Light Fixture</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>
+                <b>Team members:</b> David Wong <br>
+                <b>Duration of project:</b> May 2015 - August 2015<br>
+                <br>
+                <i><b>Abstract</b></i> - The purpose of the UV light fixture is to demonstrate a photolithography process on a three dimensional substrate, such as a cylinder, to fabricate devices, such as stents. The characteristic and performance of the UV light fixture is determined by conducting various exposure tests on various photoresist. This project was done at Takahata Lab at UBC.<br>
+                <br>
+                <i><b>Design overview</b></i> - The UV light fixture is intended to work with the micro EDM at Takahata Lab. The circuit was designed to allow the following features:
+                <ul>
+                    <li>Manually turning on or off the UV light</li>
+                    <li>EDM controlling the on or off state of the UV light</li>
+                    <li>Electrically decoupling the EDM and UV light</li>
+                    <li>Allowing the EDM or user to control UV light</li>
+                    <li>Indicator LED to determine if UV light is on</li>
+                </ul>
+                The fixture was mechanically designed to allow the following features:
+                <ul>
+                    <li>Rigidly mounting onto the microscope stage on the EDM without interfering the microscope</li>
+                    <li>Rigidly mounting the mask using a mask holder</li>
+                    <li>Low cost</li>
+                </ul>
+                <i><b>Operation</b></i> - The fixture operates using two switches: an on-off switch, and a toggle switch. The toggle switch allows the UV light fixture to be operated on and off by the micro EDM or by the user. The on-off switch turns the UV light on or off. An indicator LED safely shows whether the UV light is on or off. It is recommended to wear UV light protection during operation.
+                
+            </p>
+            <div class="container-fluid">
+                <!-- Carousel
+                ================================================== -->
+                <div id="UVLightFixtureCarousel" class="carousel slide carousel-max-width" data-interval="false">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#UVLightFixtureCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#UVLightFixtureCarousel" data-slide-to="1"></li>
+                    <li data-target="#UVLightFixtureCarousel" data-slide-to="2"></li>
+                  </ol>
+                  <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img class="first-slide" src="/images/uv_light_fixture/uv_fixture_exploded.jpg" alt="First slide">
+                    </div>
+                    <div class="item">
+                      <img class="second-slide" src="/images/uv_light_fixture/final_product.jpg" alt="Second slide">
+                    </div>
+                    <div class="item">
+                      <img class="third-slide" src="/images/uv_light_fixture/pattern.jpg" alt="Third slide">
+                    </div>
+                    <div class="item">
+                      <img class="fourth-slide" src="/images/uv_light_fixture/3d_substrate.jpg" alt="Fourth slide">
+                    </div>
+                  </div>
+                  <a class="left carousel-control" href="#UVLightFixtureCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="right carousel-control" href="#UVLightFixtureCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div><!-- /.carousel -->
+            </div>
         </section>    
     </div>
           </div>
