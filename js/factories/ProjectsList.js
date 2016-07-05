@@ -25,7 +25,7 @@ app.factory('ProjectsList', function() {
             genre: 'Mechatronics',
             team_members: 'Zhenhe Lu, David Wong',
             duration: 'March, 2016 - April, 2016',
-            abstract: 'The objective of this project is to build a sunlight position simulator to demonstrate the concept of time zones and how the amount of daylight varies. The sunlight position similar uses a desktop globe that rotates either automatically or according to the date and location from user input on the software. A stepper motor is used control globe’s angular position. As well, an array of LEDs is used to simulate the sunlight location relative to the earth. A user interface software was designed and used read user input and send signal to microcontroller to rotate the globe and light up LEDs in order to represent a miniature of earth-solar system.'
+            abstract: 'The objective of this project is to build a sunlight position simulator to demonstrate the concept of time zones and how the amount of daylight varies. The sunlight position simulator uses a desktop globe that rotates either automatically or according to the date and location from user input on the software. A stepper motor is used control globe’s angular position. As well, an array of LEDs is used to simulate the sunlight location relative to the earth. A user interface software was designed and used read user input and send signal to microcontroller to rotate the globe and light up LEDs in order to represent a miniature of earth-solar system.'
         },
 
         {
