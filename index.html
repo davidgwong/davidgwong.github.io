@@ -1,45 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
 
-    <title>Home Page</title>
+    <title>David Wong</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/css/styling.css" rel="stylesheet">
+    <link href="/css/navbar.css" rel="stylesheet">
+    <link href="/css/carousel.css" rel="stylesheet">
+
+    <!-- Include the AngularJS library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-touch.js"></script>
 
 
-  </head>
 
-  <body>
+</head>
 
-    <header>
-      <h1 id="name">
-          
-          David Wong
-          
-      </h1>
-    </header>
-      
-<section>
-      <div class="row">
-          <div class="col-sm-6 col-md-6 col-center"><a href="engineering.html"><button class="nav_button">Engineering</button></a></div>
-          <div class="col-sm-6 col-md-6 col-center"><a href="photography.html"><button class="nav_button">Photography</button></a></div>
-        </div>
-</section>
-      
-      <footer>
-      <div id="f1">
-          <a href="https://ca.linkedin.com/in/davidgwong">LinkedIn</a>
-          </div>
-    </footer>
+<body ng-app="ProjectApp">
 
-  </body>
+    <div ng-controller="NavController as nav_controller">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="brand">
+                    <h1 class="page-header">David Wong</h1>
+                </div>
+
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="page-subheader" ng-class="{ active: $route.current.activetab == 'projects' }">
+                            <a href="#/projects/">Projects <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="page-subheader" ng-class="{ active: $route.current.activetab == 'photography'  }">
+                            <a href="#/photography/">Photography</a>
+                        </li>
+                        <li class="page-subheader">
+                            <a href="https://ca.linkedin.com/in/davidgwong">LinkedIn</a>
+                        </li>
+                        <li class="page-subheader" ng-class="{ active: $route.current.activetab == 'about'  }">
+                            <a href="#/about/">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div ng-view></div>
+
+
+
+    <!-- Placed at the end of the document so the pages load faster -->
+
+
+    <!-- Modules -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="/js/ui-bootstrap-tpls-1.3.3.min.js"></script>
+
+    <!-- Controllers -->
+    <script src="js/controllers/MainController.js"></script>
+    <script src="js/controllers/ProjectDescriptionController.js"></script>
+    <script src="js/controllers/PanelController.js"></script>
+    <script src="js/controllers/NavController.js"></script>
+    <script src="js/controllers/CarouselController.js"></script>
+
+    <!-- Factories -->
+    <script src="js/factories/ProjectsList.js"></script>
+    <script src="js/factories/slides.js"></script>
+
+    <!-- Directives -->
+    <script src="js/directives/projectInfo.js"></script>
+</body>
+
 </html>
