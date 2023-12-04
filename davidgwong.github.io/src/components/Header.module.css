@@ -1,0 +1,52 @@
+.header {
+  margin-bottom: var(--mantine-spacing-md);
+  @media only screen and (max-width: var(--mantine-breakpoint-xs)) {
+    margin-top: rem(25px);
+  }
+}
+
+.headerToggled {
+  @media only screen and (max-width: var(--mantine-breakpoint-xs)) {
+    height: rem(400px);
+    margin-top: rem(25px);
+  }
+}
+
+.branding {
+  display: block;
+  font-size: 4em;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link {
+  display: block;
+  line-height: 1;
+  padding: rem(8px) rem(12px);
+  text-decoration: none;
+  color: #777;
+  font-size: 2em;
+
+  [data-mantine-color-scheme] &[data-active] {
+    background-color: #e7e7e7;
+    color: #555;
+  }
+}
+
+.link:hover {
+  color: #333;
+}
+
+.burgerPos {
+  position: absolute;
+  right: rem(25px);
+  top: rem(10px);
+}
+
+.collapse {
+  height: auto;
+}
