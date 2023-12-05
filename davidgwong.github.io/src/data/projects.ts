@@ -88,7 +88,7 @@ export const personalProjects: Project[] = [
   },
   {
     name: "Assignment Tracker",
-    description: "A React end web app to track assignments.",
+    description: "A React web app to track assignments.",
     imgSrc: "/images/personal-projects/assignment-tracker.jpg",
   },
   {
