@@ -17,6 +17,8 @@ export default function Header() {
   const [opened, { toggle }] = useDisclosure(true);
   const [active, setActive] = useState(location.pathname);
 
+  if (active == "/") setActive("/about");
+
   const items = links.map((link, index) => (
     <Link
       key={index}
