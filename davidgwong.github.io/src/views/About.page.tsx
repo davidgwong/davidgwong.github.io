@@ -24,6 +24,8 @@ export default function AboutPage() {
         <br />
         He graduated with distinction (final year GPA: 94%/A+) from the UBC
         Mechatronics Engineering program.
+        <br />He has also completed the Full-Stack Web Development program 
+        (GPA: 99%/A+) from BCIT.
         <br />
         <br />
         LinkedIn:{" "}

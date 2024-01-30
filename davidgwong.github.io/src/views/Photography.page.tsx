@@ -1,10 +1,14 @@
 import { Carousel } from "@mantine/carousel";
 import { Image, Text, Center } from "@mantine/core";
+import { useRef } from "react";
+import Autoplay from "embla-carousel-autoplay";
 
 import Photos from "../data/photos";
 import classes from "./Photography.page.module.css";
 
 export default function PhotographyPage() {
+  const autoplay = useRef(Autoplay({ delay: 3500 }));
+
   const slides = Photos.map((photo) => (
     <Carousel.Slide key={photo.title} my="auto">
       <Image
@@ -22,6 +26,9 @@ export default function PhotographyPage() {
   return (
     <Center>
       <Carousel
+        plugins={[autoplay.current]}
+        onMouseEnter={autoplay.current.stop}
+        onMouseLeave={autoplay.current.reset}
         withIndicators
         loop
         slideGap="md"
